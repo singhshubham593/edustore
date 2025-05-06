@@ -1,7 +1,29 @@
- 
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_dlblkov",
+        "template_nf50qeo",
+        form.current,
+        "CdC2hq79LgPa7wJ-c"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          console.log(result.text);
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="max-w-3xl mx-auto space-y-10">
@@ -11,12 +33,12 @@ export default function Contact() {
             If you want to contribute a document or content to this page, please fork the GitHub repository and open a Pull Request:
           </p>
           <a
-            href="https://github.com/your-username/your-repo"
+            href="https://github.com/singhshubham593/edustore"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 underline"
           >
-            https://github.com/your-username/your-repo
+            Contrebute in this repository
           </a>
         </div>
 
@@ -27,11 +49,7 @@ export default function Contact() {
           </p>
 
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Submitted successfully (mockup). Replace with backend integration.");
-            }}
-            className="space-y-4"
+             ref={form} onSubmit={sendEmail} className="space-y-4"
           >
             <input
               type="text"
@@ -54,11 +72,6 @@ export default function Contact() {
               className="w-full px-4 py-2 border rounded-md"
               rows="4"
             ></textarea>
-            <input
-              type="file"
-              name="document"
-              className="w-full"
-            />
             <button
               type="submit"
               className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
