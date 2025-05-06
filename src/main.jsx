@@ -17,7 +17,11 @@ import DsaQues from './pages/DsaQues.jsx'
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="home" element={<Home/>} />
+      <Route path="home" element={<Home/>} >
+        <Route path="SubCol" element={<SubCol />}/>
+        <Route path="InterQues" element={<InterQues />}/>
+        <Route path="DsaQues" element={<DsaQues />}/>
+      </Route>
       <Route path="Contact" element={<Contact/>} />
       <Route path="Sub" element={<Sub />} >
         <Route path="SubCol" element={<SubCol />}/>

@@ -3,7 +3,7 @@ import { Briefcase, BookOpen, Users } from "lucide-react";
 
 const About = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-blue-50 min-h-screen py-20 px-6 md:px-24" id="about">
+    <section className="bg-gradient-to-br  to-blue-100 p-12 px-6 md:px-24 pb-16"  id="about">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-extrabold text-blue-700 mb-4">About Us</h2>

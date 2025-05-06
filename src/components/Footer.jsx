@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-800 text-white py-10 px-6 md:px-20">
+    <footer className="bg-blue-950 text-white py-10 px-6 lg:py-4 md:px-20">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h2 className="text-2xl font-bold mb-4">StudentHub</h2>

@@ -5,16 +5,12 @@ const PreviousYearPapersSubjectWise = () => {
 
   // Sample subjects
   const subjects = [
-    'Mathematics',
-    'Computer Science',
-    'Physics',
-    'Chemistry',
-    'Biology',
-    'Electrical Engineering',
-    'Mechanical Engineering',
-    'Civil Engineering',
-    'Economics',
-    'Information Technology',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React JS',
+    'DBMS',
+    'OS',
   ];
 
   const handleToggle = () => {
@@ -32,9 +28,9 @@ const PreviousYearPapersSubjectWise = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-blue-950">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-semibold text-center text-blue-600 mb-8">Previous Year Papers - Subject-wise</h2>
+        <h2 className="text-4xl font-semibold text-center text-white mb-8">Interview Question - Subject-wise</h2>
         
         {/* Grid Layout for Subjects */}
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

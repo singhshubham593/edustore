@@ -25,7 +25,7 @@ export default function Contact() {
       );
   };
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-blue-950 p-6">
       <div className="max-w-3xl mx-auto space-y-10">
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">📄 Submit a Document via GitHub</h2>

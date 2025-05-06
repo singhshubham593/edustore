@@ -2,7 +2,7 @@ import React from 'react';
 
 const DsaTrackerUI = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-blue-950 text-white min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-6 md:px-24 text-center">
         <h1 className="text-5xl font-bold mb-4 text-indigo-400">Welcome to DSA Tracker</h1>
