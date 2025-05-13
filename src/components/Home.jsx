@@ -5,6 +5,7 @@ import About from './About';
 import { useNavigate } from 'react-router-dom';
 import SubCol from '../pages/SubCol';
 import book from '../Property/book.jpg';
+import phone from '../Property/phone.jpg';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -23,9 +24,10 @@ const Home = () => {
   return (
     <>
       <div className="home min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
-        <img src={web} alt="web Home page" className="flex justify-centre"/>
+        <img src={web} alt="web Home page" className="w-full hidden md:block flex justify-centre"/>
+        <img src={phone} alt="mobile page" className="w-full md:hidden flex justify-centre"/>
         <div className='mx-auto pt-12 flex flex-col justify-center items-center'>
-        <h2 className="text-blue-700 font-extrabold text-5xl font-bold mb-4">NextStep</h2>
+        <h2 className="text-blue-700 font-extrabold text-5xl font-bold mb-4">Learn</h2>
         <p className="text-lg  mx-16">
           Empowering students with previous papers, interview preparation, and DSA knowledge to
           ace their exams and secure their dream job.
