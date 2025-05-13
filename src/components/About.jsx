@@ -19,7 +19,7 @@ const About = () => {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-center">Previous Year Papers</h3>
             <p className="text-gray-700 text-center">
-              Access a rich repository of previous university question papers to aid your exam preparation.
+              Access a rich resources of previous university question papers to aid your exam preparation.
             </p>
           </div>
 
