@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">📬 Contact or Submit Document</h2>
           <p className="mb-4 text-gray-700">
-            Use the form below to send a message or upload a document directly.
+            Use the form below to send a message or inform to upload a document .
           </p>
 
           <form
