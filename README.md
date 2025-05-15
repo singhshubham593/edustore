@@ -1,12 +1,57 @@
-# React + Vite
+ # 🎓 EduStore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**EduStore** is a web-based platform built to support students in their academic and career journey. It provides access to semester exam papers, curated interview questions, and topic-wise DSA practice questions sourced from platforms like LeetCode. The goal is to make preparation centralized, simple, and accessible for every college student.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+### 📚 Semester Paper Repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Browse and download previous year university exam papers.
+* Useful for last-minute revision and exam prep.
+
+### 💼 Interview Questions Bank
+
+* Questions grouped by **Subject Name** .
+* Tagging system for question type: DSA, DBMS, OOP, HR.
+
+### 🧠 DSA Practice Portal
+
+* View topic-wise questions like Arrays, Trees, Graphs, etc.
+* Each question linked directly to **LeetCode** or similar platforms.
+* Track solved questions using local storage (or DB in full-stack version).
+
+ 
+
+### ✅ Progress Tracker (Upcoming)
+
+* Track solved DSA problems. 
+ 
+
+---
+
+## 🛠️ Tech Stack
+
+| Area             | Technology               |
+| ---------------- | ------------------------ |
+| Frontend         | React + Vite             |
+| Styling          | Tailwind CSS             |
+| Routing          | React Router             |
+| Deployment       | Vercel / Netlify         |
+
+
+---
+
+## 📦 Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/singhshubham593/edustore.git
+
+# 2. Install dependencies
+cd edustore
+npm install
+
+# 3. Start the development server
+npm run dev
