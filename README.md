@@ -1,4 +1,4 @@
- # 🎓 EduStore  -- Live Like https://edustores.netlify.app/home
+ # 🎓 EduStore  -- Live https://edustores.netlify.app/home
 
 **EduStore** is a web-based platform built to support students in their academic and career journey. It provides access to semester exam papers, curated interview questions, and topic-wise DSA practice questions sourced from platforms like LeetCode. The goal is to make preparation centralized, simple, and accessible for every college student.
 
