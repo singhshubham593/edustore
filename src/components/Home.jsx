@@ -2,7 +2,7 @@ import React from 'react'
 import web from '../Property/web.jpg';
 import Card from '../pages/Card'
 import About from './About';
-import { useNavigate,Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import SubCol from '../pages/SubCol';
 import book from '../Property/book.jpg';
 import phone from '../Property/phone.jpg';
@@ -73,9 +73,6 @@ const Home = () => {
         </div>
         </div>
         <About />
-        <div className="p-8">
-          <Outlet />
-        </div>
       </div>
     </>
   )
