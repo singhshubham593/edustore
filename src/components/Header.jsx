@@ -1,5 +1,4 @@
-import React from 'react'
- 
+ import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
 
 const Header = () => {
@@ -9,9 +8,9 @@ const Header = () => {
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="Home" className="flex items-center">
                         <img
-                            src="src/Property/EduStore.jpg"
-                            className="mr-3 h-12 rounded-lg"
-                            alt="Logo"
+                            src="/props/EduStore.png"
+                            className="mr-3 h-12 rounded-lg text-white"
+                            alt="EduStore"
                         />
                     </Link>
                     <div className="flex items-center lg:order-2">
