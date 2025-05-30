@@ -9,7 +9,7 @@ const Header = () => {
                     <Link to="Home" className="flex items-center">
                         <img
                             src="/props/EduStore.png"
-                            className="mr-3 h-8 rounded-lg text-white"
+                            className="mr-3 h-8 md:h-10 rounded-lg text-white"
                             alt="EduStore"
                         />
                     </Link>
