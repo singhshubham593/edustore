@@ -2,7 +2,7 @@ import React from 'react'
 import web from '../Property/web.jpg';
 import Card from '../pages/Card'
 import About from './About';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import SubCol from '../pages/SubCol';
 import book from '../Property/book.jpg';
 import phone from '../Property/phone.jpg';
@@ -23,6 +23,7 @@ const Home = () => {
 
   return (
     <>
+    <Outlet />
       <div className="home min-h-screen bg-gradient-to-br from-blue-50 to-blue-100">
         <img src={web} alt="web Home page" className="w-full hidden md:block flex justify-centre"/>
         <img src={phone} alt="mobile page" className="w-full md:hidden flex justify-centre"/>
