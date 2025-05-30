@@ -6,15 +6,15 @@ const PreviousYearPapersSubjectWise = () => {
   // Sample subjects
   const subjects = [
     'Mathematics',
-    'Computer Science',
-    'Physics',
-    'Chemistry',
+    'DBMS',
+    'operatingsystem',
     'Biology',
-    'Electrical Engineering',
-    'Mechanical Engineering',
-    'Civil Engineering',
-    'Economics',
-    'Information Technology',
+    'compilerDesign',
+    'ComputerNetworks',
+    'DataAnalyticsandBigData',
+    'Designandanalysisofalgorithm',
+    'discreteMathematics',
+    'MachineLearning',
   ];
 
   const handleToggle = () => {
@@ -24,7 +24,7 @@ const PreviousYearPapersSubjectWise = () => {
   const handleDownload = (subject) => {
     const fileName = subject.replace(/\s+/g, '%20') + '.pdf'; // Encode spaces
     const link = document.createElement("a");
-    link.href = `/public/${fileName}`;
+    link.href = `/doc/${fileName}`;
     link.download = `${subject}.pdf`;
     document.body.appendChild(link);
     link.click();
