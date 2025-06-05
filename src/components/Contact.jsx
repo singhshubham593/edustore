@@ -23,24 +23,12 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+      e.target.reset(); // clear form after submit
   };
   return (
     <div className="min-h-screen bg-blue-950 p-6">
       <div className="max-w-3xl mx-auto space-y-10">
-        <div className="bg-white shadow-md rounded-lg p-6">
-          <h2 className="text-2xl font-bold mb-4">📄 Submit a Document via GitHub</h2>
-          <p className="mb-4 text-gray-700">
-            If you want to contribute a document or content to this page, please fork the GitHub repository and open a Pull Request:
-          </p>
-          <a
-            href="https://github.com/singhshubham593/edustore"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 underline"
-          >
-            Contrebute in this repository
-          </a>
-        </div>
+         
 
         <div className="bg-white shadow-md rounded-lg p-6">
           <h2 className="text-2xl font-bold mb-4">📬 Contact or Submit Document</h2>
@@ -63,6 +51,12 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
+              className="w-full px-4 py-2 border rounded-md"
+            />
+            <input
+              type="text"
+              name="filelink"
+              placeholder="Paste Document Link (Google Drive, Dropbox, etc.)"
               className="w-full px-4 py-2 border rounded-md"
             />
             <textarea

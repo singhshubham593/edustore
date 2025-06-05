@@ -1,6 +1,5 @@
-import React from 'react';
-import { useState } from 'react';
- 
+import React, { useState } from 'react';
+
 const cardsData = [
   {
     title: 'Array and String',
@@ -70,11 +69,16 @@ const cardsData = [
   },
 ];
 
-
 const DsaTrackerUI = () => {
   const [showAll, setShowAll] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const visibleCards = showAll ? cardsData : cardsData.slice(0, 3);
+  // Filter cards based on search term
+  const filteredCards = cardsData.filter((card) =>
+    card.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const visibleCards = showAll ? filteredCards : filteredCards.slice(0, 3);
 
   return (
     <div className="bg-blue-950 text-white min-h-screen">
@@ -84,52 +88,69 @@ const DsaTrackerUI = () => {
         <p className="text-lg text-gray-400 mb-8">
           Track and solve Data Structures & Algorithms problems. Improve your skills with our curated questions and solutions.
         </p>
-        {/*<button className="bg-indigo-500 px-8 py-3 rounded-lg text-white hover:bg-indigo-600 transition duration-300">
+        <a
+          href="https://dsa-tracker-kappa.vercel.app/"
+          className="bg-indigo-500 px-8 py-3 rounded-lg text-white hover:bg-indigo-600 transition duration-300"
+        >
           Start Solving Now
-        </button>*/}
-        
-        <a href="https://dsa-tracker-kappa.vercel.app/" class="bg-indigo-500 px-8 py-3 rounded-lg text-white hover:bg-indigo-600 transition duration-300">Start Solving Now</a>
-
+        </a>
       </section>
 
       {/* DSA Sections */}
       <section className="py-16 px-6 md:px-24">
         <h2 className="text-3xl font-bold text-center text-indigo-400 mb-12">Explore Categories</h2>
-          
-         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-        {visibleCards.map((card, index) => (
-          <div
-            key={index}
-            className="bg-gray-800 rounded-lg shadow-lg hover:shadow-xl p-6 transition duration-300"
-          >
-            <h3 className="text-2xl font-semibold text-indigo-500 mb-4">{card.title}</h3>
-            <p className="text-gray-300 mb-4">{card.description}</p>
-            <a
-              href={card.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block bg-indigo-500 text-white px-6 py-3 rounded-lg text-center hover:bg-indigo-600 transition duration-300 w-full"
-            >
-              Explore {card.title}
-            </a>
-          </div>
-        ))}
-      </div>
 
-      {!showAll && (
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setShowAll(true)}
-            className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300"
-          >
-            Show More
-          </button>
+        {/* Search Bar */}
+        <div className="mb-12 max-w-xl mx-auto bg-white shadow-md rounded-lg text-gray-800">
+          <input
+            type="text"
+            placeholder="Search topics like Trees, Graphs, etc..."
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setShowAll(false); // reset to first 3 when search changes
+            }}
+            className="w-full px-5 py-3 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
         </div>
-      )}
-        
-      </section>
 
-       
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {visibleCards.length > 0 ? (
+            visibleCards.map((card, index) => (
+              <div
+                key={index}
+                className="bg-gray-800 rounded-lg shadow-lg hover:shadow-xl p-6 transition duration-300"
+              >
+                <h3 className="text-2xl font-semibold text-indigo-500 mb-4">{card.title}</h3>
+                <p className="text-gray-300 mb-4">{card.description}</p>
+                <a
+                  href={card.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-indigo-500 text-white px-6 py-3 rounded-lg text-center hover:bg-indigo-600 transition duration-300 w-full"
+                >
+                  Explore {card.title}
+                </a>
+              </div>
+            ))
+          ) : (
+            <p className="text-white col-span-full text-center">No topics found.</p>
+          )}
+        </div>
+
+        {/* Show More Button */}
+        {filteredCards.length > 3 && !showAll && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll(true)}
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition duration-300"
+            >
+              Show More
+            </button>
+          </div>
+        )}
+      </section>
     </div>
   );
 };
